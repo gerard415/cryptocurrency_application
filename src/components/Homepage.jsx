@@ -10,6 +10,10 @@ import News from './News'
 const {Title} = Typography
 
 const Homepage = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
   const {data, isFetching} = useGetCryptosQuery(10)
 
   const globalStats = data?.data.stats
@@ -27,12 +31,12 @@ const Homepage = () => {
       </Row>
       <div className='home-heading-container'>
         <Title level={2} className='home-title' >Top 10 Cryptocurrencies</Title>
-        <Title level={3} className='show-more'><Link to='/cryptocurrencies'>Show More</Link></Title>
+        <Title level={3} className='show-more'><Link onClick={scrollToTop} to='/cryptocurrencies'>Show More</Link></Title>
       </div>
       <Cryptocurrencies simplified />
       <div className='home-heading-container'>
         <Title level={2} className='home-title' >Latest Crypto News</Title>
-        <Title level={3} className='show-more'><Link to='/news'>Show More</Link></Title>
+        <Title level={3} className='show-more'><Link onClick={scrollToTop} to='/news'>Show More</Link></Title>
       </div>
       <News simplified />
     </>
