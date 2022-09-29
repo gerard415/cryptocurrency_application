@@ -12,6 +12,7 @@ import News from './components/News'
 
 import './App.css';
 
+
 const App = () => {
   return (
     <div className='app' >
@@ -31,11 +32,11 @@ const App = () => {
           </div>
         </Layout>
         <div className='footer' >
-          <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2021
+          <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
             <Link to="/">
-              Cryptoverse Inc.
+              Coin warrior
             </Link> <br />
-            All Rights Reserved.
+            
           </Typography.Title>
           <Space>
             <Link to="/">Home</Link>

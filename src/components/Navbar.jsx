@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css'
 
-import icon from '../images/cryptocurrency.png';
+import icon from '../images/Binance-Coin-Crypto-Logo-Transparent.png';
+
 
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState(true);
@@ -30,16 +32,16 @@ const Navbar = () => {
     return (
         <div className='nav-container'>
             <div className='logo-container' >
-                <Avatar src={icon} size='large'/>
+                <span className="logos" ><Avatar src={icon}  size='large'/></span>
                 <Typography.Title level={2} className='logo' >
-                    <Link to='/'>Cryptoverse</Link>
+                    <Link to='/'>coin warrior</Link>
                 </Typography.Title>
                 <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
             </div>
             {activeMenu && (
-                <Menu theme="dark">
-                    <Menu.Item icon={<HomeOutlined />}>
-                        <Link to="/">Home</Link>
+                <Menu theme='dark' className="customclass">
+                    <Menu.Item className='customclass'icon={<HomeOutlined />}>
+                        <Link  to="/">Home</Link>
                     </Menu.Item>
                     <Menu.Item icon={<FundOutlined />}>
                         <Link to="/cryptocurrencies">Cryptocurrencies</Link>
