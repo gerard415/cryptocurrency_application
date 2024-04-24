@@ -9,6 +9,8 @@ Simple crypto currency application in which users can see details of their favou
 ## Technology
 - Javascript
 - React
+- HTML
+- CSS
 - Material UI
 
 ![image](https://github.com/gerard415/inventory-management-application/assets/82114246/fd8adadc-b31f-492e-b539-32a6d0aa8e96)
